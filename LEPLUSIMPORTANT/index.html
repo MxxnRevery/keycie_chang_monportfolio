@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Système Ubuntu Web</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Barre supérieure -->
+  <header class="top-bar">
+    <div class="left">
+      <span class="menu-icon"><p> CHANG Keycie </p></span>
+    </div>
+    <div class="center">
+      <span class="date-time">27 Nov 10:49</span>
+    </div>
+    <div class="top-right">
+      <span class="icon">🔊</span>
+      <span class="icon">📶</span>
+      <span class="icon">🔋</span>
+      <span class="icon">⚙️</span>
+    </div>
+  </header>
+
+  <!-- Dock -->
+  <nav class="dock">
+    <ul>
+      <li data-page="help.html" class="window-btn">🔍 Aides</li>
+      <li data-page="profil.html" class="window-btn">👤 Profil</li>
+      <li data-page="bts-sio.html" class="window-btn">📚 BTS SIO</li>
+      <li data-page="entreprises.html" class="window-btn">🏢 Entreprises</li>
+      <li data-page="projets.html" class="window-btn">💻 Projets</li>
+      <li data-page="veille-tech.html" class="window-btn">🌐 Veille Tech</li>
+    </ul>
+  </nav>
+
+  <div class="mini-page">
+    <p>Bienvenue sur mon portfolio !</p>
+    <ul><a href="profil.html">Voir mon profil</a></ul>
+    <ul><a href="contact.html">Me contacter</a></ul>
+  </div>
+
+  <!-- Interface Système d'exploitation avec dossiers et fichiers -->
+  <main class="projects-section">
+    <div class="file" onclick="openPDF('pdf/CHANG_Tableau de synthese E4.pdf')">
+      <div class="file-icon">📄</div>
+      <div class="file-title">Synthèse</div>
+    </div>
+    <div class="file" onclick="openPDF('pdf/cv_chgkey.pdf')">
+      <div class="file-icon">📁</div>
+      <div class="file-title">CV</div>
+    </div>
+  </main>
+
+  <script>
+    // Fonction pour ouvrir un fichier PDF
+    function openPDF(filePath) {
+      window.open(filePath, '_blank'); // Ouvre le PDF dans un nouvel onglet
+    }
+  </script>
+
+  <!-- Conteneur des fenêtres -->
+  <div id="windows-container"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
